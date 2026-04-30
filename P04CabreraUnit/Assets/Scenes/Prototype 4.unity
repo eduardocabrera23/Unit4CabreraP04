@@ -492,7 +492,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a0e4a47c8086346b8c6825377c0400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3618690201847721042, guid: fe9baaf551112014db8cf7b4958802a5, type: 3}
+  enemyPrefab:
+  - {fileID: 3618690201847721042, guid: fe9baaf551112014db8cf7b4958802a5, type: 3}
+  - {fileID: 3618690201847721042, guid: 391686e586631d746a7ba3ad0310aeb6, type: 3}
+  enemyCount: 0
+  waveNumber: 1
+  powerupPrefabs:
+  - {fileID: 8412670838989828253, guid: a720265147631674b84a2899debaffb7, type: 3}
+  - {fileID: 8412670838989828253, guid: c8663df9cea8e784f89c7baf66bce3a5, type: 3}
 --- !u!4 &1393298103
 Transform:
   m_ObjectHideFlags: 0
@@ -658,6 +665,11 @@ Transform:
   - {fileID: 1211419928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1942144614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+  m_PrefabInstance: {fileID: 2016580009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2016580009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -668,23 +680,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_Name
-      value: SelectionRing_02
+      value: Powerup Indicator
       objectReference: {fileID: 0}
     - target: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.24354577
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.63899684
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.82533
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -870,7 +894,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   hasPowerup: 0
-  PowerupStrength: 15
+  powerupIndicator: {fileID: 1942144614}
+  currentPowerUp: 0
+  rocketPrefab: {fileID: 6216944752579334711, guid: 69e1ad20c60bf3246895a6213667be9c, type: 3}
 --- !u!1001 &7305732181041295649
 PrefabInstance:
   m_ObjectHideFlags: 0
